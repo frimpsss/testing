@@ -4,12 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/gh/LazerPay-Finance/checkout-build@main/checkout%401.0.1/dist/index.min.js"type="text/javascript"></script>
     <title>Document</title>
 </head>
 <body>
-    <button onclick="showWidget()">
+    <button id="btn">
         Show Widget
     </button>
-    <script src="https://cdn.jsdelivr.net/gh/frimpsss/testing/app3.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/frimpsss/testing/app4.js" async></script>
+    <button class="btn paynow">Pay with LazerPay</button>
+    <script>
+           const myButton = document.querySelector(".paynow");
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("btn").addEventListener("click", () => {
+               const wid =  new Tawk('bottom-right')
+
+            })
+            myButton.addEventListener("click", () => {
+      LazerCheckout({
+        name: "Package Free",
+        email: "",
+        amount: "25",
+        key: "pk_live_speggQJcM2FEZAdjkeuWvpqBfXUpUkjy50099CvrNRyow8hKv9",
+        currency: "USD",
+        onClose: (data) => {
+          console.log(data);
+        },
+        onSuccess: (data) => {
+          console.log(data);
+        },
+        onError: (data) => {
+          console.log(data);
+        }
+      })
+    })
+        })
+    </script>
 </body>
 </html>

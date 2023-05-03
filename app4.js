@@ -1,3 +1,4 @@
+import sayHello from "./test2";
 class Tawk {
   constructor({ position = 'bottom-right'}) {
       this.position = this.getPosition(position);
@@ -15,6 +16,7 @@ class Tawk {
   }
   
   initialise() {
+    sayHello()
       const container = document.createElement('div');
       container.style.position = 'fixed';
       Object.keys(this.position)
