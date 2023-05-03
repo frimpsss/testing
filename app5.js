@@ -1,4 +1,4 @@
-import sayHello from "./test2";
+import sayHello from "./test4";
 class Tawk {
   constructor({ position = 'bottom-right'}) {
       this.position = this.getPosition(position);
